@@ -1,0 +1,18 @@
+I tried to use the Command Pattern to implement robot instructions to allow maximum flexibility for adding new instructions in the future.
+I used TDD everywhere except for the input and output services which are tested by the integration test
+(i figured it should be enough for the scope of this project).
+
+To run the code for any other input, you can update the input strings inside the IntegrationTest class.
+The integration test has no assertions because it serves as a way of playing with the code with different inputs (in the absence of a GUI or endpoints)
+
+The project is using Maven, Java8, tests are running using JUnit 5 and I used the Lombok library to reduce boilerplate code,
+ such as constructors, getters and setters. (You might need to install the lombok intellij plugin if your ide thinks there are missing methods)
+
+Future improvements:
+- Add validation to input service to validate the incoming string
+
+
+Possible extensions:
+- Add different implementations of InputService
+- Add different implementationd of NavigationInstruction
+- Use Spring framework for dependency injection - this would make the integration test harness much cleaner as we wouldn't have to instantiate each component manually
